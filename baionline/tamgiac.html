@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("nhap a"))
+        let b = parseInt(prompt("nhap b"))
+        let c = parseInt(prompt("nhap c"))
+        console.log(a,b,c)
+        if (a + b > c && a + c > b && c + b > a) {
+            if (a === b && b === c && c === a) {
+                document.writeln("Tam giac abc deu");
+            } else {
+                if (a === b || c === a || c === b) {
+                    document.writeln("Tam giac abc can");
+                } else {
+                    document.writeln("Tam giac abc la tam giac thuong");
+                }
+            }
+        } else {
+            document.writeln("abc khong la tam giac");
+        }
+    </script>
+</body>
+</html>
