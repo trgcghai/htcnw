@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bai6b.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Contact us</h1>
+      <div class="form">
+        <form action="">
+          <fieldset class="fieldset message">
+            <legend>Your message</legend>
+            <div class="form_section">
+              <label class="label" for="to">To:</label>
+              <input class="input" type="text" id="to" name="to" required />
+            </div>
+            <div class="form_section">
+              <label class="label" for="your_email">Your Email:</label>
+              <input
+                class="input"
+                type="text"
+                id="your_email"
+                name="your_email"
+                required
+              />
+            </div>
+            <div class="form_section message_section">
+              <label class="label" for="message">Message:</label>
+              <textarea id="message" name="message" class="comment"></textarea>
+            </div>
+            <div class="form_section">
+              <label class="label" for="file">Attach file</label>
+              <input type="file" name="file" id="file" />
+            </div>
+          </fieldset>
+          <fieldset class="fieldset media">
+            <legend>How you found us:</legend>
+            <div class="form_section">
+              <label class="label" for="media">How did you hear us</label>
+              <select id="media" name="media" required>
+                <option value="">Select a media</option>
+                <option value="Google">Google</option>
+                <option value="Youtube">Youtube</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Tiktok">Tiktok</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form_section checkbox_section">
+              <label class="label" for="Newsletter">Newsletter</label>
+              <div class="">
+                <input
+                  type="checkbox"
+                  name="usage"
+                  value="Ensure this box is checked if you would like to receive more email update"
+                />
+                Ensure this box is checked if you would like to receive more
+                email update
+              </div>
+            </div>
+          </fieldset>
+          <div class="form_section">
+            <button type="submit" class="btn btn_submit">Send message</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
