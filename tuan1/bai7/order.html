@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bai7.css" />
+    <link rel="stylesheet" href="./css/order.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="../../assets/Tuan1/Bai7/logo.jpg" class="logo_img" />
+      </div>
+      <div class="nav">
+        <ul class="menu">
+          <li class="item">
+            <a href="bai7.html">Smith Machine</a>
+            <ul class="sub_menu">
+              <li class="sub_menu_item">
+                <a href="#overview">Overview</a>
+              </li>
+              <li class="sub_menu_item">
+                <a href="#features">Features</a>
+              </li>
+              <li class="sub_menu_item">
+                <a href="#dimensions">Dimensions</a>
+              </li>
+              <li class="sub_menu_item">
+                <a href="#optional_attachments">Options</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <a href="./order.html">Order now</a>
+          </li>
+          <li class="item">
+            <a href="./contact.html">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="container">
+      <h1 class="title">Order form</h1>
+      <div class="form">
+        <span class="note"
+          >Register your Body Systems LSM400 Linear Smith Machine now</span
+        >
+        <form action="submit-registration.php" method="post">
+          <div class="form_section">
+            <label class="label" for="first_name">First Name:</label>
+            <input
+              class="input"
+              type="text"
+              id="first_name"
+              name="first_name"
+              required
+            />
+          </div>
+          <div class="form_section">
+            <label class="label" for="first_name">Last Name:</label>
+            <input
+              class="input"
+              type="text"
+              id="first_name"
+              name="first_name"
+              required
+            />
+          </div>
+          <div class="form_section">
+            <label class="label" for="address">Address:</label>
+            <input
+              class="input"
+              type="text"
+              id="address"
+              name="address"
+              required
+            />
+          </div>
+          <div class="form_section">
+            <label class="label" for="city">City:</label>
+            <input class="input" type="text" id="city" name="city" required />
+          </div>
+          <div class="form_section">
+            <label class="label" for="State">State:</label>
+            <input class="input" type="text" id="State" name="State" required />
+          </div>
+          <div class="form_section">
+            <label class="label" for="Zip">Zip:</label>
+            <input class="input" type="text" id="Zip" name="Zip" required />
+          </div>
+          <div class="form_section">
+            <label class="label" for="country">Country:</label>
+            <select id="country" name="country" required>
+              <option value="">Select a country</option>
+              <option value="United States">United States</option>
+              <!-- Add more country options here -->
+            </select>
+          </div>
+          <div class="form_section">
+            <label class="label" for="date_purchased">Date Purchase:</label>
+            <input
+              class="input"
+              type="date"
+              id="date_purchased"
+              name="date_purchased"
+              required
+            />
+          </div>
+          <div class="action_section">
+            <button class="btn btn_cancel" type="submit">Cancel</button>
+            <button class="btn btn_register" type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>
+        Body Systems &#9830; 401 Commercial Drive &#9830; Eaton, TX 87015
+        &#9830; (800) 555-2811
+      </p>
+    </footer>
+  </body>
+</html>
