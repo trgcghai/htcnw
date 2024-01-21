@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../../assets/Tuan2/Bai2/background.png);
+}
+
+.logo_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.title {
+    font-size: 50px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.small_title {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav {
+    background-color: #92908d;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.link {
+    padding: 0 24px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.link:hover {
+    color: #000;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.content {
+    width: 60%;
+    padding: 12px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 48px;
+}
+
+.image {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.section_title {
+    font-size: 28px;
+}
+
+.section_time {
+    font-size: 22px;
+    color: rgb(247, 80, 80);
+    margin-bottom: 16px;
+}
+
+.section_paragraph {
+    font-size: 20px;
+    width: 400px;
+}
+
+.contact_title,
+.popular_title {
+    color: rgb(247, 80, 80);
+    font-size: 28px;
+}
+
+.contact_list,
+.popular_list {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.popular_item {
+    margin-left: 12px;
+    margin-bottom: 36px;
+    padding: 16px 0;
+    font-size: 18px;
+    color: rgb(247, 80, 80);
+    border-bottom: 1px solid #ccc;
+}
+
+.contact_item {
+    padding: 4px 0;
+}
+
+.footer {
+    width: 100%;
+    height: 30px;
+    background-color: #92908d;
+    line-height: 30px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.footer_content {
+    padding: 0 12px;
+    color: #fff;
+    text-align: center;
+}
