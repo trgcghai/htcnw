@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;   
+    border-bottom: 2px solid #ecbd5d;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+
+.nav {
+    height: 90vh;
+    width: 20%;
+    background-image: url(../../assets/Tuan2/Bai4/back.jpg);
+    background-repeat: repeat-y;
+}
+
+.nav_list {
+    height: fit-content;
+}
+
+.nav_item {
+    padding: 12px 0;
+    border-bottom: 2px dashed #a08040;
+    width: 170px;
+}
+
+.link {
+    font-size: 16px;
+    padding: 0 12px;
+    text-decoration: none;
+}
+
+.content {
+    width: 70%;
+    position: relative;
+}
+
+.title {
+    font-size: 28px;
+    color: #E5A641;
+    margin: 16px 0;
+}
+
+.paragraph {
+    font-size: 16px;
+    line-height: 18px;
+    color: rgb(196, 102, 102);
+    margin: 16px 0;
+}
+
+.shorter_paragraph {
+    width: 55%;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.basic_material {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border: 3px solid #E5A641;
+    padding: 12px 0;
+    background-color: #FFFEF1;
+}
+
+.small_title {
+    font-size: 24px;
+    color: #E5A641;
+    margin-bottom: 12px;
+}
+
+.material_list {
+    margin-left: 32px;
+}
+
+.material_item {
+    color: rgb(196, 102, 102);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-transform: uppercase;
+    padding: 0 16px;
+    padding-top: 4px;
+    border-top: 2px solid #ecbd5d;
+    color: #E5A641;
+}
+
+.image_wrapper {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    border: 2px solid #ccc;
+    background-color: #FFFEF1;
+    padding: 4px;
+    width: 200px;
+    color: rgb(196, 102, 102);
+}
+
+.box_1 {
+    top: -20px;
+    right: 180px;
+}
+
+.box_2 {
+    left: -50px;
+    top: 40%;
+}
+
+.box_3 {
+    right: 220px;
+    bottom: 140px;
+}
