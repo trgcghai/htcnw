@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.title {
+    font-size: 52px;
+    text-align: center;
+    padding: 16px;
+    font-weight: 600;
+    font-style: italic;
+    color: rgb(177, 76, 93);
+    border-bottom: 1px solid #ccc;
+}
+
+.nav {
+    border-bottom: 1px solid #ccc;
+    padding: 0 36px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgb(218, 127, 142);
+}
+
+.nav > :not(:last-child){ 
+    padding-right: 16px;
+    border-right: 1px solid #ccc;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.section_title {
+    padding-top: 12px;
+    font-size: 24px;
+    background-color: rgb(252, 252, 158);
+    color: rgb(177, 76, 93);
+}
+
+.list_menu {
+    margin-left: 48px;
+}
+
+.marked {
+    text-transform: uppercase;
+    color:  rgb(160, 127, 38);
+}
+
+.checked {
+    color: rgb(247, 84, 84);
+}
+
+.back_to_top {
+    color: red;
+}
