@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo {
+    height: 60px;
+    background-color: #AD4C15;
+    color: #7C7C09;
+    text-shadow: #fff -5px -5px 5px;
+    line-height: 60px;
+    letter-spacing: 4px;
+}
+
+.company_name {
+    margin-left: 20px;
+}
+
+.nav {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.nav_list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav_item {
+    padding: 4px 16px;
+}
+
+.link {
+    display: block;
+    padding: 0 8px;
+    text-decoration: none;
+    color: #AD4C15;
+    font-family: sans-serif;
+}
+
+.gray_line {
+    margin-top: 88px;
+    height: 5px;
+    width: 100%;
+    background-color: rgb(211, 208, 208);
+    border-bottom: 1px solid #000;
+}
+
+.background_line {
+    width: 100%;
+    height: 90px;
+    background-image: url(../../assets/Tuan3/Bai3/line2.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    margin-bottom: 20px;
+}
+
+.content_wrapper {
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+.left_content {
+    width: 65%;
+    padding: 16px;
+    border-right: 1px solid #ccc;
+}
+
+.title {
+    color: #7C7C09;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+}
+
+.paragraph {
+    margin-left: 32px;
+    margin-bottom: 32px;
+    color: #7C7C09;
+    font-style: italic;
+    text-align: justify;
+}
+
+.form {
+    margin-left: 32px;
+}
+
+.form_section {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.label {
+    color: #757575;
+    font-family: sans-serif;
+    display: inline-block;
+    width: 150px;
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    cursor: text;
+}
+
+.input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    padding: 4px 8px;
+    width: 300px;
+    font-size: 16px;
+}
+
+.input:focus + .label {
+    display: none;
+}
+
+.signup_btn {
+    text-transform: uppercase;
+    background-color: #7C7C09;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    width: 120px;
+    height: 30px;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.right_content {
+    width: 30%;
+    padding: 16px;
+}
+
+.links {
+    background-color: #FAEBD8;
+    padding: 0 16px;
+    border-radius: 24px 24px 0 0;
+    margin-bottom: 16px;
+}
+
+.more_info_title,
+.links_title {
+    color: #614134;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+}
+
+.links_list {
+    margin-left: 40px;
+    list-style-type: square;
+}
+
+.links_item {
+    padding: 4px 0;
+}
+
+.links_item::marker {
+    color: #AD4C15;
+}
+
+.more_info {
+    padding: 0 16px;
+}
+
+.more_info_content {
+    overflow: hidden;
+}
+
+.image {
+    padding: 12px;
+    margin-right: 12px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+.more_info_paragraph {
+    color: #614134;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+}
+
+.left_top_corner {
+    height: 50%;
+    width: 50px;
+    background-image: url(../../assets/Tuan3/Bai3/corner1.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.left_bottom_corner {
+    height: 50%;
+    width: 50px;
+    background-image: url(../../assets/Tuan3/Bai3/corner2.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.right_top_corner {
+    height: 50%;
+    width: 50px;
+    background-image: url(../../assets/Tuan3/Bai3/corner3.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.right_bottom_corner {
+    height: 50%;
+    width: 50px;
+    background-image: url(../../assets/Tuan3/Bai3/corner4.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.top {
+    width: calc(100% - 100px);
+    height: 50%;
+    background-image: url(../../assets/Tuan3/Bai3/footer2.png);
+    background-size: auto;
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    left: 50px;
+}
+
+.copyright {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    font-family: sans-serif;
+}
