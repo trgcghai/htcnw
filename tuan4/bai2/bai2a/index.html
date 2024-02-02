@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../../bootstrap-4.3.1-dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row" class="title fs-20">Checkout</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <div class="col">
+                <div class="row font-weight-bold">Product 1</div>
+                <div class="row">
+                  <span class="text-black-50 font-weight-normal"
+                    >Lorem ipsum dolor sit amet</span
+                  >
+                </div>
+              </div>
+            </th>
+            <td class="text-right">$200</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              <div class="col">
+                <div class="row font-weight-bold">Product 2</div>
+                <div class="row">
+                  <span class="text-black-50 font-weight-normal"
+                    >Lorem ipsum dolor sit amet</span
+                  >
+                </div>
+              </div>
+            </th>
+            <td class="text-right">$120</td>
+          </tr>
+          <tr>
+            <th scope="row">Total</th>
+            <td class="text-right">$320</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="form">
+        <h5 class="title">Credit Card Details</h5>
+        <form action="" class="container">
+          <div class="row">
+            <div class="col-7">
+              <div class="form-group">
+                <label for="cardHolder" class="text-black-50"
+                  >CARD HOLDER</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardHolder"
+                  placeholder="Card Holder"
+                />
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="form-group">
+                <label for="expirationDate" class="text-black-50"
+                  >Expiration Date</label
+                >
+                <div class="input_wrapper d-flex gap-8 align-items-center">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="expirationDateM"
+                    placeholder="MM"
+                  />
+                  /
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="expirationDateY"
+                    placeholder="YY"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <div class="form-group">
+                <label for="cardNumber" class="text-black-50"
+                  >CARD NUMBER</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardNumber"
+                  placeholder="Card Number"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <label for="cvc" class="text-black-50">CVC</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cvc"
+                  placeholder="CVC"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button
+                type="button"
+                class="btn btn-primary btn-lg btn-block"
+                style="margin-top: 16px"
+              >
+                Proceed
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
