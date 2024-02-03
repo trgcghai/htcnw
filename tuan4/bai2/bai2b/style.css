@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-gray {
+    background-color: #353A40 !important;
+}
+
+.search_btn {
+    background-color: #F8F9FA !important;
+    color: #000;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.navbar-expand-lg {
+    justify-content: space-between;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
