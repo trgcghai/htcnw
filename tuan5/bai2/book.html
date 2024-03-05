@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/Tuan5/Bai2/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="../../tuan4/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/Tuan5/Bai2/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="../../tuan4/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/Tuan5/Bai2/js/jquery-3.4.1.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header
+      class="container-fluid"
+      style="background-image: linear-gradient(to right, #0d0e10, #374141)"
+    >
+      <div class="container d-flex justify-content-between">
+        <div class="logo text-light" style="line-height: 56px; font-size: 28px">
+          Feane
+        </div>
+
+        <div class="navbar">
+          <ul class="d-flex gap-4 m-0" style="list-style: none">
+            <li class="nav-item text-light text-uppercase">
+              <a class="nav-link" href="./home.html">Home</a>
+            </li>
+            <li class="nav-item text-light text-uppercase">
+              <a class="nav-link" href="./menu.html">Menu</a>
+            </li>
+            <li class="nav-item text-light text-uppercase">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item text-light text-uppercase">
+              <a class="nav-link active" href="./book.html">Book table</a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="action d-flex justify-content-between align-items-center gap-4"
+        >
+          <div class="action_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              height="22"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+              />
+            </svg>
+          </div>
+          <div class="action_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              height="22"
+              viewBox="0 0 576 512"
+            >
+              <path
+                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+              />
+            </svg>
+          </div>
+          <div class="action_icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              height="22"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+              />
+            </svg>
+          </div>
+
+          <div class="action_button">
+            <a
+              href="./order.html"
+              class="border-0 px-4 py-2 text-light text-decoration-none"
+              style="
+                background-color: var(--yellow);
+                outline: none;
+                border-radius: 28px;
+              "
+            >
+              Order Online
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="form" style="margin-top: 100px">
+        <h1 class="text-capitalize fw-normal">Book a table</h1>
+        <div class="container p-0">
+          <div class="row">
+            <div class="col col-6" style="margin-top: 12px">
+              <div class="row mb-4">
+                <div class="form_section">
+                  <input
+                    class="p-2 w-100"
+                    type="text"
+                    id="userName"
+                    placeholder="Your name"
+                  />
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="form_section">
+                  <input
+                    class="p-2 w-100"
+                    type="text"
+                    id="phoneNumber"
+                    placeholder="Phone number"
+                  />
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="form_section">
+                  <input
+                    class="p-2 w-100"
+                    type="email"
+                    id="email"
+                    placeholder="Your email"
+                  />
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="form_section">
+                  <input
+                    class="p-2 w-100"
+                    type="text"
+                    id="person"
+                    placeholder="How many person"
+                  />
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="form_section">
+                  <input
+                    class="p-2 w-100"
+                    type="date"
+                    id="date"
+                    placeholder="dd/mm/yyyy"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-6">
+              <div class="map_container">
+                <img
+                  src="../../assets/Tuan5/Bai2/images/map.png"
+                  class="w-100"
+                  style="border-radius: 12px"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="border-0 px-5 py-2 text-light"
+          id="submitBtn"
+          style="
+            background-color: var(--yellow);
+            outline: none;
+            border-radius: 28px;
+          "
+        >
+          Book now
+        </button>
+      </div>
+    </main>
+
+    <script>
+      $(document).ready(() => {
+        const userName = $("#userName");
+        const telephone = $("#phoneNumber");
+        const email = $("#email");
+        const person = $("#person");
+        const date = $("#date");
+        const submitBtn = $("#submitBtn");
+
+        submitBtn.click(() => {
+          let valid = true;
+
+          if (!/^[a-zA-Z0-9_]{3,20}$/.test(userName.val())) {
+            valid = false;
+            userName.css("border", "1px solid red");
+          }
+
+          if (!/^(\+[0-9]{1,3})?[0-9\-() ]{7,20}$/.test(telephone.val())) {
+            valid = false;
+            telephone.css("border", "1px solid red");
+          }
+
+          if (
+            !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+              email.val()
+            )
+          ) {
+            valid = false;
+            email.css("border", "1px solid red");
+          }
+
+          if (!/^[0-9]+$/.test(person.val())) {
+            valid = false;
+            person.css("border", "1px solid red");
+          }
+
+          if (
+            !/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[01])$/.test(
+              date.val()
+            )
+          ) {
+            valid = false;
+            date.css("border", "1px solid red");
+          }
+
+          userName.val("");
+          telephone.val("");
+          email.val("");
+          person.val("");
+          date.val("");
+
+          if (valid) {
+            alert("Book succesfully");
+          } else {
+            alert("Book failed");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
