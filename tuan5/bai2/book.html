@@ -199,38 +199,15 @@
         submitBtn.click(() => {
           let valid = true;
 
-          if (!/^[a-zA-Z0-9_]{3,20}$/.test(userName.val())) {
-            valid = false;
-            userName.css("border", "1px solid red");
-          }
-
-          if (!/^(\+[0-9]{1,3})?[0-9\-() ]{7,20}$/.test(telephone.val())) {
-            valid = false;
-            telephone.css("border", "1px solid red");
-          }
-
-          if (
-            !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
-              email.val()
-            )
-          ) {
-            valid = false;
-            email.css("border", "1px solid red");
-          }
-
-          if (!/^[0-9]+$/.test(person.val())) {
-            valid = false;
-            person.css("border", "1px solid red");
-          }
-
-          if (
-            !/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[01])$/.test(
-              date.val()
-            )
-          ) {
-            valid = false;
-            date.css("border", "1px solid red");
-          }
+          valid = /^[a-zA-Z0-9_]{3,20}$/.test(userName.val());
+          valid = /^(\+[0-9]{1,3})?[0-9\-() ]{7,20}$/.test(telephone.val());
+          valid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+            email.val()
+          );
+          valid = /^[0-9]+$/.test(person.val());
+          valid = /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[01])$/.test(
+            date.val()
+          );
 
           userName.val("");
           telephone.val("");
