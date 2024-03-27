@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form_section {
+        margin: 12px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h3>Form định dạng</h3>
+      <form action="">
+        <div class="form_section">
+          <label for="hoten">Họ và tên</label>
+          <input type="text" name="" id="hoten" />
+        </div>
+        <div class="form_section">
+          <label for="">Chọn</label>
+          <input
+            type="radio"
+            name="option"
+            value="background"
+            id="background"
+          />
+          <label for="">Background</label>
+          <input type="radio" name="option" value="font" id="font" />
+          <label for="">Font</label>
+        </div>
+        <div class="form_section">
+          <label for="color">Chọn màu</label>
+          <select id="color">
+            <option value="null">Chọn màu...</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="pink">Pink</option>
+            <option value="black">Black</option>
+          </select>
+        </div>
+        <div class="form_section">
+          <button type="button" id="change">Đổi màu</button>
+          <button type="button" id="cancel">Cancel</button>
+        </div>
+      </form>
+
+      <p class="styled">
+        you can direct link the hyperlink with the file if you know the address
+        but this is limited by the browser. eg. if pdf reader is installed on
+        the client then the pdf will not be downloaded instead it will be shown.
+        A good solution would be to have a seperate page for downloading files.
+        just pass filename in querystring and in the pageload event just outpit
+        the file in response stream. This way you can use url say dwnld.aspx?
+        filename.ext
+      </p>
+    </main>
+
+    <script>
+      const changeBtn = document.getElementById("change");
+      const cancelBtn = document.getElementById("cancel");
+
+      changeBtn.addEventListener("click", () => {
+        let options = document.querySelectorAll("input[type=radio]");
+        options.forEach((option) => {
+          if (!option.checked) return;
+          const color = document.getElementById("color").value;
+          if (color == "Chọn màu...") return;
+
+          console.log(option.value);
+          if (option.value == "background") {
+            document.querySelector(".styled").style.backgroundColor = color;
+          } else if (option.value == "font") {
+            document.querySelector(".styled").style.color = color;
+          }
+        });
+      });
+
+      cancelBtn.addEventListener("click", () => {
+        document.querySelector(".styled").style.backgroundColor = "transparent";
+        document.querySelector(".styled").style.color = "black";
+      });
+    </script>
+  </body>
+</html>

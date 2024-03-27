@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container">
+      <h4>Chọn các loại cafe</h4>
+      <div class="checkbox_section">
+        <input
+          type="checkbox"
+          class="checkbox_input"
+          name=""
+          value="Trung nguyên"
+          id="trungnguyen"
+        />
+        <label for="trungnguyen">Trung nguyên</label>
+      </div>
+      <div class="checkbox_section">
+        <input
+          type="checkbox"
+          class="checkbox_input"
+          value="Me kong"
+          name=""
+          id="mekong"
+        />
+        <label for="mekong">Me kong</label>
+      </div>
+      <div class="checkbox_section">
+        <input
+          type="checkbox"
+          class="checkbox_input"
+          value="New life"
+          name=""
+          id="newlife"
+        />
+        <label for="newlife">New life</label>
+      </div>
+      <div class="checkbox_section">
+        <input
+          type="checkbox"
+          class="checkbox_input"
+          value="Ocean Blue"
+          name=""
+          id="oceanblue"
+        />
+        <label for="oceanblue">Ocean blue</label>
+      </div>
+      <div class="checkbox_section">
+        <input
+          type="checkbox"
+          class="checkbox_input"
+          value="Blue space"
+          name=""
+          id="bluespace"
+        />
+        <label for="bluespace">Blue space</label>
+      </div>
+      <div class="checkbox_section">
+        <input
+          type="checkbox"
+          class="checkbox_input"
+          value="Windows"
+          name=""
+          id="windows"
+        />
+        <label for="windows">Windows</label>
+      </div>
+      <button class="chose">Chọn</button>
+      <div>
+        Bạn đã chọn cafe:
+        <span class="chosenList" style="color: red"></span>
+      </div>
+    </main>
+
+    <script>
+      const choseBtn = document.querySelector(".chose");
+      choseBtn.addEventListener("click", () => {
+        let resultText = "";
+        document.querySelectorAll(".checkbox_input").forEach((item) => {
+          resultText += item.checked ? item.value + ", " : "";
+        });
+        document.querySelector(".chosenList").innerText = resultText;
+      });
+    </script>
+  </body>
+</html>

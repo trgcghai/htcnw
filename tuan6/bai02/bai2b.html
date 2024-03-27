@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Phép tính cơ bản</h3>
+      <div class="input_section">
+        <label for="">Nhập số thứ 1</label>
+        <input type="text" class="firstNumber" />
+      </div>
+      <div class="input_section">
+        <label for="">Nhập số thứ 2</label>
+        <input type="text" class="secondNumber" />
+      </div>
+      <div class="input_section">
+        <button id="cong">Cộng</button>
+        <button id="tru">Trừ</button>
+        <button id="nhan">Nhân</button>
+        <button id="chia">Chia</button>
+      </div>
+      <div class="input_section">
+        <label for="">Kết quả</label>
+        <input type="text" id="result" disabled />
+      </div>
+    </div>
+
+    <script>
+      const handleSubmit = (required) => {
+        console.log(document.querySelector(".firstNumber").value);
+        console.log(document.querySelector(".secondNumber").value);
+        const a = parseInt(document.querySelector(".firstNumber").value);
+        const b = parseInt(document.querySelector(".secondNumber").value);
+        if (required == "cong") {
+          document.querySelector("#result").value = a + b;
+        } else if (required == "tru") {
+          document.querySelector("#result").value = a - b;
+        } else if (required == "nhan") {
+          document.querySelector("#result").value = a * b;
+        } else {
+          document.querySelector("#result").value = a / b;
+        }
+      };
+
+      document.getElementById("cong").addEventListener("click", () => {
+        handleSubmit(document.getElementById("cong").id);
+      });
+      document.getElementById("tru").addEventListener("click", () => {
+        handleSubmit(document.getElementById("tru").id);
+      });
+      document.getElementById("nhan").addEventListener("click", () => {
+        handleSubmit(document.getElementById("nhan").id);
+      });
+      document.getElementById("chia").addEventListener("click", () => {
+        handleSubmit(document.getElementById("chia").id);
+      });
+    </script>
+  </body>
+</html>

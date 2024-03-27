@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .border {
+        width: fit-content;
+        border: 1px solid #ccc;
+        padding: 2px;
+        width: 400px;
+      }
+
+      caption {
+        border: 1px solid pink;
+        color: pink;
+      }
+
+      table {
+        width: 100%;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="border">
+      <table id="table" border="1">
+        <caption>
+          Danh sách sinh viên
+        </caption>
+        <tr>
+          <th>MSSV</th>
+          <th>Tên</th>
+          <th>Lớp</th>
+        </tr>
+        <tr>
+          <td>001</td>
+          <td>Hoàng minh</td>
+          <td>5A</td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      let mssv = prompt("Nhập mã số sinh viên");
+      let ten = prompt("Nhập tên sinh viên");
+      let lop = prompt("Nhập lớp sinh viên");
+
+      const table = document.getElementById("table");
+      const tr = document.createElement("tr");
+      let html = `
+        <td>${mssv}</td>
+        <td>${ten}</td>
+        <td>${lop}</td>
+      `;
+      tr.innerHTML = html;
+
+      table.appendChild(tr);
+    </script>
+  </body>
+</html>
