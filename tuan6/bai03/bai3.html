@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .container {
+        padding: 8px;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+        width: 316px;
+        height: 346px;
+      }
+
+      .img_container {
+        margin-bottom: 8px;
+        position: relative;
+      }
+
+      .image {
+        position: absolute;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .active {
+        display: block;
+      }
+
+      .button_container {
+        text-align: center;
+        margin-top: 310px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img_container">
+        <img
+          src="../../assets/Tuan678910/Images/b1.jpg"
+          height="300px"
+          width="300px"
+          class="image active"
+          id="image_1"
+          alt=""
+        />
+        <img
+          src="../../assets/Tuan678910/Images/b2.jpg"
+          height="300px"
+          width="300px"
+          class="image hide"
+          id="image_2"
+          alt=""
+        />
+        <img
+          src="../../assets/Tuan678910/Images/b3.jpg"
+          height="300px"
+          width="300px"
+          class="image hide"
+          id="image_3"
+          alt=""
+        />
+        <img
+          src="../../assets/Tuan678910/Images/b4.jpg"
+          height="300px"
+          width="300px"
+          class="image hide"
+          id="image_4"
+          alt=""
+        />
+        <img
+          src="../../assets/Tuan678910/Images/b5.jpg"
+          height="300px"
+          width="300px"
+          class="image hide"
+          id="image_5"
+          alt=""
+        />
+        <img
+          src="../../assets/Tuan678910/Images/b6.jpg"
+          height="300px"
+          width="300px"
+          class="image hide"
+          id="image_6"
+          alt=""
+        />
+        <img
+          src="../../assets/Tuan678910/Images/b7.jpg"
+          height="300px"
+          width="300px"
+          class="image hide"
+          id="image_7"
+          alt=""
+        />
+        <img
+          src="../../assets/Tuan678910/Images/b8.jpg"
+          height="300px"
+          width="300px"
+          class="image hide"
+          id="image_8"
+          alt=""
+        />
+        <img
+          src="../../assets/Tuan678910/Images/b9.jpg"
+          height="300px"
+          width="300px"
+          class="image hide"
+          id="image_9"
+          alt=""
+        />
+        <img
+          src="../../assets/Tuan678910/Images/b10.jpg"
+          height="300px"
+          width="300px"
+          class="image hide"
+          id="image_10"
+          alt=""
+        />
+      </div>
+      <div class="button_container">
+        <button type="button" id="play">Play</button>
+        <button type="button" id="stop">Stop</button>
+      </div>
+    </div>
+
+    <script>
+      const playBtn = document.getElementById("play");
+      const stopBtn = document.getElementById("stop");
+
+      let i = 2;
+      const changeSrc = () => {
+        const images = document.querySelectorAll(".image");
+        const curImg = document.querySelector(".active");
+
+        curImg.classList.remove("active");
+        document
+          .getElementById(`image_${i++}`)
+          .classList.replace("hide", "active");
+
+        if (i === 11) {
+          i = 1;
+        }
+
+        startChange();
+      };
+
+      let timeOutId;
+      function startChange() {
+        timeOutId = setTimeout(changeSrc, 2000);
+      }
+
+      function stopChange() {
+        clearTimeout(timeOutId);
+      }
+
+      playBtn.addEventListener("click", () => {
+        console.log("started");
+        startChange();
+      });
+      stopBtn.addEventListener("click", () => {
+        console.log("stopped");
+        stopChange();
+      });
+    </script>
+  </body>
+</html>
