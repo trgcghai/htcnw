@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="../../assets/Tuan678910/Images/banner_car.jpg"
+          class="w-100"
+          alt=""
+        />
+      </div>
+
+      <div class="main">
+        <div class="row">
+          <div class="col col-4">
+            <table class="table table-secondary table-bordered">
+              <thead>
+                <tr>
+                  <th
+                    scope="col"
+                    colspan="4"
+                    class="text-center"
+                    style="color: blueviolet"
+                  >
+                    Bảng tin thị trường
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th
+                    scope="col"
+                    colspan="4"
+                    class="text-center"
+                    style="color: blue"
+                  >
+                    Vàng
+                  </th>
+                </tr>
+                <tr>
+                  <td
+                    colspan="2"
+                    class="bg-white text-center"
+                    style="color: blue"
+                  >
+                    Mua vào
+                  </td>
+                  <td
+                    colspan="2"
+                    class="bg-white text-center"
+                    style="color: blue"
+                  >
+                    Bán ra
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    colspan="2"
+                    style="height: 41px"
+                    id="vnd_in"
+                    class="bg-white text-center"
+                  ></td>
+                  <td
+                    colspan="2"
+                    style="height: 41px"
+                    id="vnd_out"
+                    class="bg-white text-center"
+                  ></td>
+                </tr>
+                <tr>
+                  <th
+                    scope="col"
+                    colspan="4"
+                    class="text-center"
+                    style="color: blue"
+                  >
+                    USD
+                  </th>
+                </tr>
+                <tr>
+                  <td
+                    colspan="2"
+                    class="bg-white text-center"
+                    style="color: blue"
+                  >
+                    Mua vào
+                  </td>
+                  <td
+                    colspan="2"
+                    class="bg-white text-center"
+                    style="color: blue"
+                  >
+                    Bán ra
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    colspan="2"
+                    style="height: 41px"
+                    id="usd_in"
+                    class="bg-white text-center"
+                  ></td>
+                  <td
+                    colspan="2"
+                    style="height: 41px"
+                    id="usd_out"
+                    class="bg-white text-center"
+                  ></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col col-4">
+            <table class="table table-secondary table-bordered">
+              <thead>
+                <tr>
+                  <th
+                    scope="col"
+                    colspan="4"
+                    class="text-center"
+                    style="color: blueviolet"
+                  >
+                    Cập nhật giá cả thị trường
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Mua vào</th>
+                  <td>
+                    <input type="text" id="txtMua" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Bán ra</th>
+                  <td>
+                    <input type="text" id="txtBan" />
+                  </td>
+                </tr>
+                <tr>
+                  <th>Loại xe</th>
+                  <td>
+                    <select name="" id="car_select">
+                      <option value="./images/car1.jpg; 35000">Toyota</option>
+                      <option value="./images/car2.jpg; 15000">KIA</option>
+                      <option value="./images/car3.jpg; 40000">Ford</option>
+                      <option value="./images/car4.jpg; 32000">Civic</option>
+                      <option value="./images/car5.jpg; 50000">Ferrari</option>
+                      <option value="./images/car7.jpg; 45000">Mercedes</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td>
+                    <input
+                      type="radio"
+                      class="radio_input"
+                      value="0"
+                      name="type"
+                    />
+                    <label class="fw-bold" for="">Vàng</label>
+                    <input
+                      type="radio"
+                      class="radio_input"
+                      value="1"
+                      name="type"
+                    />
+                    <label class="fw-bold" for="">USD</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td>
+                    <button type="button" id="update_btn" disabled>
+                      Update
+                    </button>
+                    <button type="button" id="state_btn">State</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col col-4">
+            <table class="table table-secondary table-bordered">
+              <thead>
+                <tr>
+                  <th
+                    scope="col"
+                    colspan="4"
+                    class="text-center"
+                    style="color: blueviolet"
+                  >
+                    Bảng báo giá
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="4" class="bg-white" style="color: blue">
+                    - Với kiểu dáng thể thao, sang trọng <br />
+                    - Nổi bật, ít tốn nhiên liệu <br />
+                    - Kiểu dáng thể thao
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4">
+                    <img
+                      src="./images/car3.jpg"
+                      class="d-block mx-auto"
+                      alt=""
+                      id="image_display"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="bg-white fw-bold" style="color: green">
+                    Giá: <span id="price_display">35000</span> USD
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        const inField = $("#txtMua");
+        const outField = $("#txtBan");
+
+        inField.blur(() => {
+          const inValue = inField.val();
+
+          if (/^[0-9]+$/.test(inValue)) {
+            $("#update_btn").attr("disabled", false);
+          } else {
+            $("#update_btn").attr("disabled", true);
+          }
+        });
+
+        $("#update_btn").click(() => {
+          const options = $(".radio_input");
+          let selected = null;
+          Array.from(options).forEach((option) => {
+            if (option.checked) {
+              selected = option.value;
+            }
+          });
+          if (selected == null) {
+            return;
+          }
+          if (selected == 0) {
+            console.log("vang ");
+            $("#vnd_in").text(inField.val());
+            $("#vnd_out").text(outField.val());
+          } else if (selected == 1) {
+            console.log("usd ");
+            $("#usd_in").text(inField.val());
+            $("#usd_out").text(outField.val());
+          }
+
+          inField.val("");
+          outField.val("");
+        });
+
+        $("#car_select").change(() => {
+          const value = $("#car_select").val();
+          const imgURL = value.split(";")[0];
+          const price = value.split(";")[1];
+
+          $("#image_display").attr("src", imgURL);
+          $("#price_display").text(price);
+        });
+      });
+    </script>
+  </body>
+</html>
