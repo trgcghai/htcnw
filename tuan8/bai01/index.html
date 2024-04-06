@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+
+    <style type="text/css">
+      input[type="submit"],
+      input[type="reset"] {
+        padding: 0, 1em 0.2em;
+        border: 1px solid hsla(0, 0%, 0%, 0.3);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        background-color: #000;
+        color: #fff;
+        text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: rgb(56, 46, 46);
+        transition: 0.3s;
+      }
+
+      span {
+        color: red;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center text-uppercase">đăng ký tài khoản</h2>
+      <form name="form1" onsubmit="return SubmitForm()" id="form" method="post">
+        <div class="border-bottom py-2">
+          <label
+            for="txtDN"
+            class="title float-start text-end pe-2 text-dark"
+            style="width: 40%; font-size: 18px"
+          >
+            Tên đăng nhập:
+          </label>
+          <input
+            type="text"
+            id="txtDN"
+            onblur="return kiemTraTenDN()"
+            name="txtdn"
+            size="30"
+            placeholder="txtDN"
+          />
+          <span id="tendn">*</span>
+        </div>
+        <div class="border-bottom py-2">
+          <label
+            for="txtMK"
+            class="title float-start text-end pe-2 text-dark"
+            style="width: 40%; font-size: 18px"
+          >
+            Mật khẩu
+          </label>
+          <input
+            type="password"
+            id="txtMK"
+            onblur="return kiemTraPassWord()"
+            name="txtMK"
+            size="30"
+            placeholder="txtMK"
+          />
+          <span id="mk">*</span>
+        </div>
+        <div class="border-bottom py-2">
+          <label
+            for="txtXNMK"
+            class="title float-start text-end pe-2 text-dark"
+            style="width: 40%; font-size: 18px"
+          >
+            Nhập lại mật khẩu:
+          </label>
+          <input
+            type="password"
+            id="txtXNMK"
+            onblur="return kiemTraXacNhanPassWord()"
+            name="txtXNMK"
+            size="30"
+            placeholder="txtXNMK"
+          />
+          <span id="xnmk">*</span>
+        </div>
+
+        <h5 style="text-align: center; text-transform: uppercase">
+          thông tin cá nhân
+        </h5>
+        <div class="border-bottom py-2">
+          <label
+            for="txtName"
+            class="title float-start text-end pe-2 text-dark"
+            style="width: 40%; font-size: 18px"
+          >
+            Họ và tên:
+          </label>
+          <input
+            type="text"
+            id="txtName"
+            name="txtName"
+            size="30"
+            placeholder="txtName"
+          />
+          <span id="hoten">* bắt buộc</span>
+        </div>
+        <div class="border-bottom py-2">
+          <label
+            for="txtNS"
+            class="title float-start text-end pe-2 text-dark"
+            style="width: 40%; font-size: 18px"
+          >
+            Ngày sinh:
+          </label>
+          <input
+            type="date"
+            id="txtNS"
+            name="txtNS"
+            onblur="return kiemTraNgaySinh()"
+            size="30"
+            placeholder="txtNS"
+          />
+          <span id="ngaysinh"></span>
+        </div>
+        <div class="border-bottom py-2">
+          <label
+            for="txtNS"
+            class="title float-start text-end pe-2 text-dark"
+            style="width: 40%; font-size: 18px"
+          >
+            Giới tính:
+          </label>
+          <input type="radio" name="gender" id="male" value="M" checked />
+          <label for="male">Nam</label>
+          <input type="radio" name="gender" id="female" value="F" />
+          <label for="female">Nữ</label>
+        </div>
+        <div class="border-bottom py-2">
+          <label
+            for="txtDC"
+            class="title float-start text-end pe-2 text-dark"
+            style="width: 40%; font-size: 18px"
+          >
+            Địa chỉ:
+          </label>
+          <input
+            type="text"
+            id="txtDC"
+            name="txtDC"
+            size="30"
+            placeholder="txtDC"
+          />
+          <span id="diachi"></span>
+        </div>
+        <div class="border-bottom py-2">
+          <label
+            for="txtDT"
+            class="title float-start text-end pe-2 text-dark"
+            style="width: 40%; font-size: 18px"
+          >
+            Điện thoại:
+          </label>
+          <input
+            type="text"
+            id="txtDT"
+            name="txtDT"
+            size="30"
+            placeholder="txtDT"
+          />
+          <span id="dienthoai">phải là số</span>
+        </div>
+        <div class="border-bottom py-2">
+          <label
+            for="txtEmail"
+            class="title float-start text-end pe-2 text-dark"
+            style="width: 40%; font-size: 18px"
+          >
+            Email:
+          </label>
+          <input
+            type="email"
+            id="txtEmail"
+            name="txtEmail"
+            size="30"
+            placeholder="txtEmail"
+          />
+          <span id="email">nhập đúng địa chỉ email</span>
+        </div>
+        <div class="text-center border-bottom py-2">
+          <input type="submit" value="Đăng ký" id="submit" />
+          <input type="reset" value="Hủy" id="cancel" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const kiemTraTenDN = () => {
+        const regex = /^[a-z]\w*/;
+        if (!regex.test(document.getElementById("txtDN").value.trim())) {
+          document.getElementById("tendn").innerText =
+            "*bắt buộc, bắt đầu bằng ký tự";
+          return false;
+        } else {
+          document.getElementById("tendn").innerText = "*";
+          return true;
+        }
+      };
+
+      const kiemTraPassWord = () => {
+        const regex = /(?=.*\d).{6,}/;
+        if (!regex.test(document.getElementById("txtMK").value.trim())) {
+          document.getElementById("mk").innerText =
+            "* phải có chữ, số, ít nhất 6 kí tự";
+          return false;
+        } else {
+          document.getElementById("mk").innerText = "*";
+          return true;
+        }
+      };
+
+      const kiemTraXacNhanPassWord = () => {
+        if (
+          document.getElementById("txtXNMK").value.trim() !==
+          document.getElementById("txtMK").value.trim()
+        ) {
+          document.getElementById("xnmk").innerText = "* phải giống ô mật khẩu";
+          return false;
+        } else {
+          document.getElementById("xnmk").innerText = "*";
+          return true;
+        }
+      };
+
+      const kiemTraNgaySinh = () => {
+        const birthday = new Date(document.getElementById("txtNS").value);
+        const today = new Date();
+
+        if (eval(today.getFullYear() - birthday.getFullYear()) <= 10) {
+          document.getElementById("ngaysinh").innerText =
+            "tuổi phải lớn hơn 10";
+          return false;
+        } else {
+          document.getElementById("ngaysinh").innerText = "";
+          return true;
+        }
+      };
+
+      const SubmitForm = () => {
+        if (kiemTraTenDN() && kiemTraPassWord() && kiemTraXacNhanPassWord()) {
+          return true;
+        }
+        alert("Bạn nhập chưa đủ thông tin");
+        return false;
+      };
+    </script>
+  </body>
+</html>
