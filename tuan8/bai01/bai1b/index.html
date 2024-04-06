@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header
+        class="header d-flex align-items-center justify-content-between"
+        style="background-color: rgb(80, 80, 245)"
+      >
+        <div
+          class="fs-3 px-3 fw-bold text-light"
+          style="font-family: sans-serif"
+        >
+          facebook
+        </div>
+
+        <div
+          class="d-flex px-3 align-items-center justify-content-between gap-3"
+        >
+          <div class="input_group">
+            <label for="" class="text-light d-block"
+              >Email hoặc điện thoại</label
+            >
+            <input type="text" name="" class="d-block" id="loginEmail" />
+            <input type="checkbox" name="" id="rememberLogin" />
+            <label for="" class="text-body-secondary">Ghi nhớ đăng nhập</label>
+          </div>
+          <div class="input_group">
+            <label for="" class="text-light d-block">Mật khẩu</label>
+            <input type="password" name="" class="d-block" id="loginPwd" />
+            <a href="#" class="text-decoration-none text-body-secondary"
+              >Quên mật khẩu ?</a
+            >
+          </div>
+          <div class="input_group">
+            <button
+              type="submit"
+              id="loginBtn"
+              class="border fw-bold text-light"
+              style="outline: none; background-color: rgb(133, 133, 247)"
+            >
+              Đăng nhập
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="main" style="background-color: #e5e6fb">
+        <div class="row">
+          <div class="col col-5">
+            <img
+              src="./images/Screenshot 2024-04-07 013316.png"
+              class="mt-3 w-50"
+              alt=""
+            />
+            <div
+              class="fs-1 my-3 text-center w-50"
+              style="color: rgb(42, 108, 151)"
+            >
+              Cảm ơn bạn đã ghé thăm !
+            </div>
+
+            <div class="fs-6 fw-bold text-center w-50 text-dark">
+              Chúng tôi mong sớm gặp lại bạn
+            </div>
+          </div>
+
+          <div class="col col-7">
+            <div class="fs-2 my-3 fw-bold" style="font-family: sans-serif">
+              Đăng ký
+            </div>
+            <div class="fs-5 my-3 fw-bold" style="font-family: sans-serif">
+              Miễn phí và sẽ luôn như vậy
+            </div>
+
+            <div class="form w-75">
+              <form action="">
+                <div class="row my-2">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="w-100 border-1 py-1 px-2"
+                      style="border-radius: 8px"
+                      name=""
+                      id="txtHo"
+                      placeholder="Họ"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="w-100 border-1 py-1 px-2"
+                      style="border-radius: 8px"
+                      name=""
+                      id="txtTen"
+                      placeholder="Tên"
+                    />
+                  </div>
+                </div>
+
+                <div class="row my-2">
+                  <div class="col">
+                    <input
+                      type="email"
+                      class="w-100 border-1 py-1 px-2"
+                      style="border-radius: 8px"
+                      name=""
+                      id="txtEmail"
+                      placeholder="Email đăng nhập"
+                    />
+                  </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col">
+                    <input
+                      type="email"
+                      class="w-100 border-1 py-1 px-2"
+                      style="border-radius: 8px"
+                      name=""
+                      id="txtNhapLaiEmail"
+                      placeholder="Nhập lại email"
+                    />
+                  </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col">
+                    <input
+                      type="password"
+                      class="w-100 border-1 py-1 px-2"
+                      style="border-radius: 8px"
+                      name=""
+                      id="txtPwd"
+                      placeholder="Mật khẩu"
+                    />
+                  </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="w-100 border-1 py-1 px-2"
+                      style="border-radius: 8px"
+                      name=""
+                      id="txtNamSinh"
+                      placeholder="Năm sinh"
+                    />
+                  </div>
+                </div>
+                <div class="row my-2">
+                  <div class="col">
+                    <button
+                      type="submit"
+                      id="dangKyBtn"
+                      class="text-light text-center w-50"
+                      style="
+                        background-color: rgb(43, 190, 43);
+                        border-radius: 8px;
+                      "
+                    >
+                      Đăng ký
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        const loginEmail = $("#loginEmail");
+        const loginPwd = $("#loginPwd");
+        const loginBtn = $("#loginBtn");
+
+        const hoField = $("#txtHo");
+        const tenField = $("#txtTen");
+        const emailField = $("#txtEmail");
+        const nhapLaiEmail = $("#txtNhapLaiEmail");
+        const pwdField = $("#txtPwd");
+        const namSinhField = $("#txtNamSinh");
+        const dangKyBtn = $("#dangKyBtn");
+
+        loginBtn.click((e) => {
+          e.preventDefault();
+          const email = loginEmail.val();
+          const pwd = loginPwd.val();
+
+          if (email.length == 0) {
+            alert("Vui lòng nhập thông tin đăng nhập");
+            loginEmail.focus();
+            return;
+          }
+
+          if (pwd.length == 0) {
+            alert("Vui lòng nhập thông tin đăng nhập");
+            loginPwd.focus();
+            return;
+          }
+
+          if (
+            !/^[0-9]{10}$/.test(email) &&
+            !/^[a-zA-Z]{1}[\w]+(\.[a-zA-Z]+)?@[a-z]+\.[a-z]{2,}/.test(email)
+          ) {
+            alert("Email hoặc số điện thoại không hợp lệ");
+            loginEmail.focus();
+            return;
+          }
+
+          alert("Đăng nhập thành công !!");
+          loginEmail.val("");
+          loginPwd.val("");
+        });
+
+        const validataData = () => {
+          const ho = hoField.val().trim();
+          const ten = tenField.val().trim();
+          const email = emailField.val().trim();
+          const nhapLaiEmailVal = nhapLaiEmail.val().trim();
+          const pwd = pwdField.val().trim();
+          const namSinh = namSinhField.val().trim();
+
+          if (
+            ho.length == 0 ||
+            ten.length == 0 ||
+            email.length == 0 ||
+            nhapLaiEmailVal.length == 0 ||
+            pwd.length == 0 ||
+            namSinh.length == 0
+          ) {
+            alert("Vui lòng nhập đủ thông tin");
+            hoField.focus();
+            return false;
+          }
+
+          if (!/^[A-Z]{1}[a-z]+$/.test(ho)) {
+            alert("Họ không hợp lệ");
+            hoField.focus();
+            return false;
+          }
+
+          if (!/^[A-Z]{1}[a-z]+(\s[A-Z]{1}[a-z]+)?$/.test(ten)) {
+            alert("Tên không hợp lệ");
+            tenField.focus();
+            return false;
+          }
+
+          if (
+            !/^[a-zA-Z]{1}[\w]+(\.[a-zA-Z]+)?@[a-z]+\.[a-z]{2,}/.test(email)
+          ) {
+            alert("Email không hợp lệ");
+            emailField.focus();
+            return false;
+          }
+
+          if (email != nhapLaiEmailVal) {
+            alert("Email nhập lại không trùng");
+            nhapLaiEmail.focus();
+            return false;
+          }
+
+          if (!/^(?=.*[a-zA-Z])(?=.*\d).{6,}$/.test(pwd)) {
+            alert("Mật khẩu phải có chữ, số và ít nhất 6 ký tự");
+            pwdField.focus();
+            return false;
+          }
+
+          if (!/^[0-9]{4,}$/.test(namSinh)) {
+            alert("Năm sinh không hợp lệ");
+            namSinhField.focus();
+            return false;
+          }
+
+          if (parseInt(namSinh) > 2002) {
+            alert("Năm sinh phải bé hơn 2002");
+            namSinhField.focus();
+            return false;
+          }
+
+          return true;
+        };
+
+        dangKyBtn.click((e) => {
+          e.preventDefault();
+
+          if (validataData()) {
+            alert("Đăng ký thành công");
+
+            window.location.reload();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
