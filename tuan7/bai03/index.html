@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="border bg-success" style="--bs-bg-opacity: 0.5">
+        <div class="text-center py-3 fs-5">Register Form</div>
+
+        <div class="px-2">
+          <table class="table table-bordered table-success">
+            <tbody>
+              <tr>
+                <td class="text-end">Họ và tên (*):</td>
+                <td>
+                  <input
+                    type="text"
+                    class="w-75"
+                    name="hoten"
+                    id="hoTenField"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">Tên đăng nhập (*):</td>
+                <td>
+                  <input
+                    type="text"
+                    class="w-75"
+                    name="tendangnhap"
+                    id="tenDangNhapField"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">Mật khẩu (*):</td>
+                <td>
+                  <input
+                    type="password"
+                    class="w-75"
+                    name="matkhau"
+                    id="matKhauField"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">Xác nhận mật khẩu (*):</td>
+                <td>
+                  <input
+                    type="password"
+                    class="w-75"
+                    name="xacnhanmatkhau"
+                    id="xacNhanMKField"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">Ngày sinh:</td>
+                <td>
+                  Ngày
+                  <input
+                    type="number"
+                    style="width: 10%"
+                    min="1"
+                    max="31"
+                    value="1"
+                    name="ngaySinh"
+                    id="ngaySinhField"
+                  />
+                  Tháng
+                  <input
+                    type="number"
+                    style="width: 10%"
+                    min="1"
+                    max="12"
+                    value="1"
+                    name="thangSinh"
+                    id="thangSinhField"
+                  />
+                  Năm
+                  <input
+                    type="number"
+                    style="width: 10%"
+                    min="1900"
+                    max="2024"
+                    value="1940"
+                    name="namSinh"
+                    id="namSinhField"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">Điện thoại:</td>
+                <td>
+                  <input
+                    type="text"
+                    class="w-75"
+                    name="dienthoai"
+                    id="dienThoaiField"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">Địa chỉ:</td>
+                <td>
+                  <input
+                    type="text"
+                    class="w-75"
+                    name="diachi"
+                    id="diaChiField"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">Email khác:</td>
+                <td>
+                  <input
+                    type="email"
+                    class="w-75"
+                    name="email"
+                    id="emailField"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end">Sở thích:</td>
+                <td>
+                  <select name="sothich" id="soThichSelect">
+                    <option value="Ca nhạc">Ca nhạc</option>
+                    <option value="Đọc sách">Đọc sách</option>
+                    <option value="Chơi game">Chơi game</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-end"></td>
+                <td>
+                  <button type="button" id="dangKyBtn">Dang ky</button>
+                  <button type="button" id="huyBtn">Huy</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        $("#dangKyBtn").click(() => {
+          const hoTen = $("#hoTenField").val();
+          const tenDN = $("#tenDangNhapField").val();
+          const matKhau = $("#matKhauField").val();
+          const xacNhanMK = $("#xacNhanMKField").val();
+          const ngaySinh = $("#ngaySinhField").val();
+          const thangSinh = $("#thangSinhField").val();
+          const namSinh = $("#namSinhField").val();
+          const dienThoai = $("#dienThoaiField").val();
+          const diaChi = $("#diaChiField").val();
+          const email = $("#emailField").val();
+          const soThich = $("#soThichSelect").val();
+
+          if (hoTen.length === 0) {
+            $("#hoTenField").focus();
+            return;
+          }
+
+          if (tenDN.length === 0) {
+            $("#tenDangNhapField").focus();
+            return;
+          }
+
+          if (matKhau.length === 0) {
+            $("#matKhauField").focus();
+            return;
+          }
+
+          if (xacNhanMK.length === 0) {
+            $("#xacNhanMKField").focus();
+            return;
+          }
+
+          if (tenDN.length < 6) {
+            alert("Tên đăng nhập phải ít nhất 6 kí tự");
+            $("#tenDangNhapField").focus();
+            return;
+          }
+
+          if (!/^[0-9]+$/.test(dienThoai)) {
+            alert("Điện thoại phải là số");
+            $("#dienThoaiField").focus();
+            return;
+          }
+
+          if (!/^[\w]+(@gmail\.com)$/.test(email)) {
+            alert(
+              "Email không được chứa kí tự đặc biệt và phải kết thúc @gmail.com"
+            );
+            $("#emailField").focus();
+            return;
+          }
+
+          if (matKhau != xacNhanMK) {
+            alert("Xác nhận mật khẩu không chính xác");
+            $("#xacNhanMKField").focus();
+            return;
+          }
+
+          const inputValue = {
+            hoTen: hoTen,
+            tenDN,
+            matKhau,
+            xacNhanMK,
+            ngaySinh: ngaySinh + "/" + thangSinh + "/" + namSinh,
+            dienThoai,
+            diaChi,
+            email,
+            soThich,
+          };
+
+          localStorage.setItem("inputValue", JSON.stringify(inputValue));
+          window.location.href = "thongTin.html";
+
+          $("#hoTenField").val("");
+          $("#tenDangNhapField").val("");
+          $("#matKhauField").val("");
+          $("#xacNhanMKField").val("");
+          $("#ngaySinhField").val("1");
+          $("#thangSinhField").val("1");
+          $("#namSinhField").val("1940");
+          $("#dienThoaiField").val("");
+          $("#diaChiField").val("");
+          $("#emailField").val("");
+          $("#soThichSelect").val("");
+        });
+      });
+    </script>
+  </body>
+</html>

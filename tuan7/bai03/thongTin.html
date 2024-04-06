@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="border bg-success" style="--bs-bg-opacity: 0.5">
+        <div class="text-center py-3 fs-5">Register Form</div>
+
+        <div class="px-2">
+          <table class="table table-bordered table-success">
+            <tbody>
+              <tr>
+                <td class="text-end">Họ và tên (*):</td>
+                <td id="hoTen"></td>
+              </tr>
+              <tr>
+                <td class="text-end">Tên đăng nhập (*):</td>
+                <td id="tenDN"></td>
+              </tr>
+              <tr>
+                <td class="text-end">Mật khẩu (*):</td>
+                <td id="matKhau"></td>
+              </tr>
+              <tr>
+                <td class="text-end">Xác nhận mật khẩu (*):</td>
+                <td id="xacNhanMK"></td>
+              </tr>
+              <tr>
+                <td class="text-end">Ngày sinh:</td>
+                <td id="ngaySinh"></td>
+              </tr>
+              <tr>
+                <td class="text-end">Điện thoại:</td>
+                <td id="dienThoai"></td>
+              </tr>
+              <tr>
+                <td class="text-end">Địa chỉ:</td>
+                <td id="diaChi"></td>
+              </tr>
+              <tr>
+                <td class="text-end">Email khác:</td>
+                <td id="email"></td>
+              </tr>
+              <tr>
+                <td class="text-end">Sở thích:</td>
+                <td id="soThich"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        const inputValue = JSON.parse(localStorage.getItem("inputValue"));
+        for (key in inputValue) {
+          $(`#${key}`).text(inputValue[key]);
+        }
+      });
+    </script>
+  </body>
+</html>
