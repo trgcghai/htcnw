@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">STT</th>
+            <th scope="col">Hình ảnh</th>
+            <th scope="col">Giá</th>
+            <th scope="col">Số lượng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>
+              <img
+                src="../../assets/Tuan678910/Images/cafe1.jpg"
+                class="w-25"
+                alt=""
+              />
+            </td>
+            <td>Giá <span id="price_1">20000</span></td>
+            <td>
+              <input type="number" min="0" value="20" name="" id="txtNumber1" />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>
+              <img
+                src="../../assets/Tuan678910/Images/cafe2.jpg"
+                class="w-25"
+                alt=""
+              />
+            </td>
+            <td>Giá <span id="price_2">40000</span></td>
+            <td>
+              <input type="number" min="0" value="5" name="" id="txtNumber2" />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>
+              <img
+                src="../../assets/Tuan678910/Images/cafe3.jpg"
+                class="w-25"
+                alt=""
+              />
+            </td>
+            <td>Giá <span id="price_3">30000</span></td>
+            <td>
+              <input type="number" min="0" value="0" name="" id="txtNumber3" />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>
+              <img
+                src="../../assets/Tuan678910/Images/cafe4.jpg"
+                class="w-25"
+                alt=""
+              />
+            </td>
+            <td>Giá <span id="price_4">50000</span></td>
+            <td>
+              <input type="number" min="0" value="0" name="" id="txtNumber4" />
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>
+              <img
+                src="../../assets/Tuan678910/Images/cafe5.jpg"
+                class="w-25"
+                alt=""
+              />
+            </td>
+            <td>Giá <span id="price_5">30000</span></td>
+            <td>
+              <input type="number" min="0" value="0" name="" id="txtNumber5" />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Tổng thành tiền</td>
+            <td><span id="totalPrice">600000</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        const price1 = $("#price_1").text();
+        const price2 = $("#price_2").text();
+        const price3 = $("#price_3").text();
+        const price4 = $("#price_4").text();
+        const price5 = $("#price_5").text();
+
+        const quantity1 = $("#txtNumber1");
+        const quantity2 = $("#txtNumber2");
+        const quantity3 = $("#txtNumber3");
+        const quantity4 = $("#txtNumber4");
+        const quantity5 = $("#txtNumber5");
+
+        const totalPrice = $("#totalPrice");
+
+        const calulateFromString = (quantity, price) => {
+          return parseInt(quantity) * parseInt(price);
+        };
+
+        const handleChange = () => {
+          let totalPriceNumber =
+            calulateFromString(quantity1.val(), price1) +
+            calulateFromString(quantity2.val(), price2) +
+            calulateFromString(quantity3.val(), price3) +
+            calulateFromString(quantity4.val(), price4) +
+            calulateFromString(quantity5.val(), price5);
+
+          totalPrice.text(totalPriceNumber);
+        };
+
+        quantity1.change(handleChange);
+        quantity2.change(handleChange);
+        quantity3.change(handleChange);
+        quantity4.change(handleChange);
+        quantity5.change(handleChange);
+      });
+    </script>
+  </body>
+</html>
