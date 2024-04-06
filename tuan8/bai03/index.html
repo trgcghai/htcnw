@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <div class="my-2">
+          <label for="" style="width: 100px">Họ tên:</label>
+          <input type="text" name="" id="txtHoTen" />
+          <small class="text-danger" id="msgHoTen"></small>
+        </div>
+        <div class="my-2">
+          <label for="" style="width: 100px">Lớp:</label>
+          <select name="" id="txtLop">
+            <option value="Đại học Kỹ thuật phần mềm 18ATT">
+              Đại học Kỹ thuật phần mềm 18ATT
+            </option>
+            <option value="Đại học Kỹ thuật phần mềm 18BTT">
+              Đại học Kỹ thuật phần mềm 18BTT
+            </option>
+            <option value="Đại học Kỹ thuật phần mềm 18CTT">
+              Đại học Kỹ thuật phần mềm 18CTT
+            </option>
+          </select>
+        </div>
+        <div class="my-2">
+          <label for="" style="width: 100px">Môn học:</label>
+          <select name="" id="txtMon">
+            <option value="Lập trình hướng đối tượng">
+              Lập trình hướng đối tượng
+            </option>
+            <option value="Cấu trúc dữ liệu và giải thuật">
+              Cấu trúc dữ liệu và giải thuật
+            </option>
+            <option value="Hệ cơ sở dữ liệu">Hệ cơ sở dữ liệu</option>
+          </select>
+        </div>
+        <div class="my-2">
+          <label for="" style="width: 100px">Loại:</label>
+          <input
+            type="radio"
+            name="loai"
+            value="Lý thuyết"
+            checked
+            id="txtLyThuyet"
+          />
+          <label for="">Lý thuyết</label>
+          <input type="radio" name="loai" value="Thực hành" id="txtThucHanh" />
+          <label for="">Thực hành</label>
+        </div>
+        <div class="my-2 mb-4">
+          <button type="submit" id="dangKyBtn" disabled>Đăng ký</button>
+        </div>
+      </form>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Họ tên</th>
+            <th scope="col">Lớp</th>
+            <th scope="col">Môn học đăng ký</th>
+            <th scope="col">Loại</th>
+          </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+      </table>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        const dangKyBtn = $("#dangKyBtn");
+        const hoTenField = $("#txtHoTen");
+        const lopField = $("#txtLop");
+        const monField = $("#txtMon");
+
+        hoTenField.focus();
+
+        hoTenField.change(() => {
+          dangKyBtn.attr("disabled", hoTenField.val().trim().length == 0);
+        });
+
+        dangKyBtn.click((e) => {
+          e.preventDefault();
+          if (
+            !/^[A-Z]{1}[a-z]+(\s[A-Z]{1}[a-z]+)*$/.test(hoTenField.val().trim())
+          ) {
+            $("#msgHoTen").text(
+              "Họ tên phải bắt đầu bằng chữ hoa và không chứa số hoặc ký tự đặt biệt"
+            );
+            hoTenField.focus();
+            return;
+          }
+
+          const hoTen = hoTenField.val();
+          const lop = lopField.val();
+          const mon = monField.val();
+          const loai = $("#txtLyThuyet").prop("checked")
+            ? $("#txtLyThuyet").val()
+            : $("#txtThucHanh").val();
+
+          let html = `
+          <tr>
+            <td>${hoTen}</td>
+            <td>${lop}</td>
+            <td>${mon}</td>
+            <td>${loai}</td>
+          </tr>
+          `;
+
+          $(".tbody").append(html);
+
+          hoTenField.val("");
+          dangKyBtn.attr("disabled", true);
+        });
+      });
+    </script>
+  </body>
+</html>
